@@ -15,6 +15,9 @@ void showMenu() {
     printf("4. Pesquisar Livros\n"); // Pesquisa linear
     printf("5. Empilhar Livro\n");
     printf("6. Sair\n");
+    printf("7. Enfileirar livro\n");
+    printf("8. Desinfileirar livro\n");
+    printf("9. Sair\n");
     printf("Escolha uma opção: ");
 }
 
@@ -46,9 +49,20 @@ int main() {
                 break;
 
             case 6:
-                printf("Encerrando o sistema...\n");
+                desempilharLivro();
                 break;
 
+            case 7:
+                enfileirarLivro();
+                break;
+
+            case 8:
+                desenfileirarLivro();
+                break;
+
+            case 9:
+                printf("Encerrando sistema...\n");
+                break;
             default:
                 printf("Opção inválida, tente novamente.\n");
         }
